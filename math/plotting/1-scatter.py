@@ -8,11 +8,11 @@ np.random.seed(5)
 x, y = np.random.multivariate_normal(mean, cov, 2000).T
 y += 180
 
-# your code here
-plt.scatter(x,y)
-plt.title('Men\'s Height vs Height')
-plt.xlabel('Weight (in)')
-plt.ylabel('Height (lbs)')
-plt.legend(['Men\'s Height vs Weight'])
-plt.show()
+plt.scatter(x, y, color='magenta')
 
+plt.xlabel('Weight (lbs)')
+plt.ylabel('Height (in)')
+
+plt.title("Men's Height vs Weight")
+
+plt.show()

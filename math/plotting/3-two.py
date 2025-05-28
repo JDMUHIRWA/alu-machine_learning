@@ -9,14 +9,16 @@ t2 = 1600
 y1 = np.exp((r / t1) * x)
 y2 = np.exp((r / t2) * x)
 
-# your code here
 plt.xlabel('Time (years)')
 plt.ylabel('Fraction Remaining')
-plt.title('Exponential Decay of C-14 and Ra-226')
-plt.plot(x, y1, color='red', marker='o', markersize=5, linestyle='dashed', linewidth=1)
-plt.plot(x, y2, color='black', marker='o', markersize=5)
-plt.legend(['C-14', 'Ra-226'])
-# plt.xlim(1, 21000)
-# plt.ylim(0.0001, 1)
-plt.grid()
+plt.title('Exponential Decay of Radioactive Elements')
+
+plt.xlim(0, 20000)
+plt.ylim(0, 1)
+
+plt.plot(x, y1, 'r--', label='C-14')
+plt.plot(x, y2, 'g-', label='Ra-226')
+
+plt.legend(loc='upper right')
+
 plt.show()
