@@ -63,11 +63,10 @@ class Neuron:
         Args:
             Y(numpy.ndarray): Actual labels for the input data
             A(numpy.ndarray): activated output of the neuron for each example
-        
+
         Returns:
             float: Returns the cost of the model
         """
         m = Y.shape[1]
         cost = -np.sum(Y * np.log(A) + (1 - Y) * np.log(1.0000001 - A)) / m
         return cost
-
