@@ -1,9 +1,22 @@
 #!/usr/bin/env python3
-import numpy as np  # Required for random normal distribution
+"""Defines a single neuron performing binary classification."""
+import numpy as np
+
 
 class Neuron:
-    # Defining the constructor
+    """Represents a single neuron performing binary classification."""
+
     def __init__(self, nx):
+        """
+        Initialize the neuron.
+
+        Args:
+            nx (int): The number of input features to the neuron.
+
+        Raises:
+            TypeError: If nx is not an integer.
+            ValueError: If nx is less than 1.
+        """
         # Validate nx type
         if not isinstance(nx, int):
             raise TypeError("nx must be an integer")
